@@ -3,17 +3,43 @@
 <head>
 <meta charset="UTF-8">
 <title>회원가입</title>
+<link rel="stylesheet" href="css/style.css"/>
+<meta name="viewport"
+	content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
 </head>
 <body>
-      <form action="login.jsp" method="post">
-     <input type="email" name="email"
-     placeholder="이메일을 입력하세요" required="required"> <br/>
-     <input type="password" name="password"
-     placeholder="비밀번호를 입력하세요" required="required"> <br/>
-     <input type="text" name="nickname"
-     placeholder="닉네임을 입력하세요" required="required"> <br/>
-
-    
-     </form>
+	<h1>Create account</h1>
+	<div class="inner_login">
+		<div class="login_myweb">
+			<div id="msg" class="msg"></div>
+			<form method="post" action="server.jsp" id="registerform">
+				<fieldset>
+					<legend class="screen_out">회원 가입 입력폼</legend>
+					<div class="box_login">
+						<div class="inp_text">
+							<label for="email" class="screen_out">이메일</label> <input
+								type="email" id="email" name="email" placeholder="이메일을 입력하세요!">
+						</div>
+						<div class="inp_text">
+							<label for="userpw" class="screen_out">비밀번호</label> <input
+								type="password" id="userpw" name="userpw"
+								placeholder="비밀번호를 입력하세요!">
+						</div>
+						<div class="inp_text">
+						<label for="nickname" class="screen_out">닉네임</label> <input
+								type="text" id="nickname" name="nickname"
+								placeholder="닉네임을 입력하세요!">
+						</div>
+					</div>
+					<button type="submit" class="btn_login">Sign up</button>
+					<div class="login_append">
+						<a class="authnav__item" href="/en/auth/view">Back to log in</a>
+					</div>
+				
+				</fieldset>
+			</form>
+		</div>
+	</div>
 </body>
+<script src="js/login.js"></script>
 </html>

@@ -21,8 +21,11 @@
  <session-config>
   <session-timeout>3</session-timeout>
  </session-config>
-
-
+<!--404에러가 발생한경우 보여질 페이지를 설정 web.xml 파일에서 /로 시작하며 WebContent에서부터의 경로-->
+<error-page>
+<error-code>404</error-code>
+<location>/error/error404.jsp</location>
+</error-page>
 </web-app>
 
 
